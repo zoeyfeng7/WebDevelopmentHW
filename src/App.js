@@ -1,25 +1,6 @@
 import React from "react";
-import Cell, { CellProvider, useCell } from "./Cell";
-
-const Grid = () => {
-  const { activeCells } = useCell();
-
-  return (
-    <div>
-      <div>Count: {activeCells}</div>
-      <div style={{ display: "flex", flexDirection: "row" }}>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <Cell />
-          <Cell />
-        </div>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <Cell />
-          <Cell />
-        </div>
-      </div>
-    </div>
-  );
-};
+import { CellProvider } from "./CellContext";
+import Grid from "./Grid";
 
 const App = () => {
   return (
